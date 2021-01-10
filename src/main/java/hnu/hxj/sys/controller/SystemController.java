@@ -1,0 +1,27 @@
+package hnu.hxj.sys.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("sys")
+public class SystemController {
+
+    /**
+     * 跳转到登录页面
+     * @return
+     */
+    @RequestMapping("toLogin")
+    public String toLogin(){
+        return "system/index/login";
+    }
+
+    /**
+     * 跳转到首页
+     */
+    @RequestMapping("index")
+    public String index(){
+        return "system/index/index";
+    }
+
+}
