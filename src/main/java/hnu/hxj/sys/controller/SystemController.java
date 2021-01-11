@@ -24,4 +24,21 @@ public class SystemController {
         return "system/index/index";
     }
 
+    /**
+     * 跳转到工作台
+     */
+    @RequestMapping("toDeskManager")
+    public String toDeskManager(){return "system/index/deskManager";}
+
+    /**
+     * 跳转到日志管理
+     */
+    @RequestMapping("toLoginfoManager")
+    public String toLoginfoManager(){return "system/loginfo/loginfoManager";}
+
+    @RequestMapping("toNoticeManager")
+    public String toNoticeManager(){
+        return "system/notice/noticeManager";
+    }
+
 }
