@@ -1,4 +1,4 @@
-## 项目模板修改
+## *项目模板修改*
 
 - 下载layui模板：https://gitee.com/layuicms/layuicms2.0?_from=gitee_search
 
@@ -137,6 +137,48 @@
 #### 删除公告
 
 #### 查看公告
+
+### 部门管理
+
+#### 查询
+
+- 生成代码...
+- 修改DeptServerImpl
+- 创建dept/deptManager.html
+- 创建dept/deptLeft.html
+- 创建dept/deptLeftRight.html
+
+*使用<frmaeset>分割两个页面 不过现在这种方法好像已经被跑起来了*
+
+- 创建SystemController
+
+#### 添加修改
+
+#### 删除　
+
+
+
+----
+
+1.12 放弃继续 感觉这个老师大多数讲的都是前端的 特别是前端技术栈用的比较老 在东西很杂的前端领域没有太大的普适性 对一个目标为后端的我来说时间花的有点划不来 ...
+
+不过还是从这个老师这学习到很多优秀的习惯、以及熟悉了使用springboot、mybatispuls、mysql以及shiro的搭建过程，项目具体的业务无非增删改查
+
+- 使用Vo类集成Entity，与前端进行交互，能够兼容一些前端传过来的属性，然后在此基础上做一些业务上写的逻辑，相当于一个数据库和展示层数据交互的中间处理的过程，
+
+- 缓存的设计，编写一个缓存类，利用aop的环绕通知对service中的增删改查业务进行增强，查询的时候可以直接从缓存中查，其他操作同步更新数据库
+
+  **问题：哪些地方需要加缓存？**
+
+- 静态方法获取Ioc容器中的东西的方式：
+
+  定义一个类继承ApplicationContextAware，spring加载时会扫描整个包中实现了ApplicationContextAware接口的类，并调用回调方法，这个时候就能获取applicationContext对象，然后我们可以通过applicationContext对象来获取IOC容器中的bean
+
+  ![image-20210112163659245](/home/hxj/.config/Typora/typora-user-images/image-20210112163659245.png)
+
+使用该工具类：
+
+![image-20210112163907478](/home/hxj/.config/Typora/typora-user-images/image-20210112163907478.png)
 
 
 

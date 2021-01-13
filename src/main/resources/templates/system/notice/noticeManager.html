@@ -141,7 +141,7 @@
             toolbar: "#batchdel",
             page: true,
             height: "full-190",
-            cols: [ [
+            cols: [[
                 {type: 'checkbox', fixed: 'left'},
                 {field: 'id', title: 'ID', align: 'center'},
                 {field: 'title', title: '标题', align: 'center'},
@@ -149,7 +149,7 @@
                 {field: 'createtime', title: '创建时间', align: 'center'},
                 {field: 'opername', title: '创建人', align: 'center'},
                 {fixed: 'right', title: '操作', toolbar: '#singledel', align: 'center'}
-            ] ],
+            ]],
             done: function (data, curr, count) {
                 //不是第一页时，如果当前返回的数据为0那么就返回上一页
                 if (data.data.length == 0 && curr != 1) {
@@ -276,13 +276,13 @@
             }
         }
 
-        function showNotice(){
+        function showNotice() {
             layer.open({
                 type: 1,
-                content:$("#showNoticeDiv"),
-                area:['800px','550px'],
-                title:'查看公告',
-                success:function () {
+                content: $("#showNoticeDiv"),
+                area: ['800px', '550px'],
+                title: '查看公告',
+                success: function () {
                     $("#show_title").html(data.title);
                     $("#show_opername").html(data.opername);
                     $("#show_createtime").html(data.createtime);

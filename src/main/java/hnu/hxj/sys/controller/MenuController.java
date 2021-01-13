@@ -29,7 +29,7 @@ public class MenuController {
     private IPermissionService permissionService;
 
     @RequestMapping("loadIndexLeftMenuJson")
-    public DataGridView loadIndexLeftMenuJson(PermissionVo permissionVo) {
+    public DataGridView loadIndexLeftMenuJson() {
         QueryWrapper<Permission> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("type", Constast.TYPE_MNEU);
         queryWrapper.eq("available", Constast.AVAILABLE_TRUE);
